@@ -1,0 +1,53 @@
+/*
+    Name Of The Program:weekday-using-switch-case
+    Author Of The Program:mahidhar
+    Purpose Of The Program: To display the name of the day based on the user-entered day number using a switch case .
+    Date On Which The Program Is Written:12-11-2025
+    Description Of The Program (In My Own Words):This program accepts a day number from the user and uses a switch case to display the corresponding day of the week.
+    Expected Input And Expected Output:
+        Case 1:
+              Expected Input:1
+
+              Expected Output:sunday
+        Case 2:
+              Expected Input:2
+
+              Expected Output:monday
+        Case 3:
+              Expected Input:7
+
+              Expected Output:saturday
+    Conclusion:
+*/
+ #include <stdio.h>      //header file
+
+int main() {              //main function
+    int day ;
+    printf("enter the day :");
+    scanf("%d",&day);
+
+    switch (day) {
+        case 1:
+            printf("sunday");
+            break;
+        case 2:
+            printf("monday");
+            break;
+        case 3:
+            printf("tuesday");
+            break;
+        case 4:
+            printf("wednesday");
+            break;
+        case 5:
+            printf("thursday");
+            break;
+        case 6:    
+             printf("friday");
+             break;
+        default:
+            printf("saturday");
+    }
+
+    return 0;
+}
