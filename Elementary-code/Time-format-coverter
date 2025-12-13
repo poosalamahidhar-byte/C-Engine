@@ -21,7 +21,7 @@
               Expected Output:4
     Conclusion:
 */
-}#include<stdio.h>
+#include<stdio.h>
 
 int main()
 {
