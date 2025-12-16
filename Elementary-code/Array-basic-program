@@ -1,0 +1,54 @@
+/*
+    Name Of The Program:Array-basic-program
+    Author Of The Program:mahidhar
+    Purpose Of The Program:To read elements into an array and display them using a loop in C.
+    Date On Which The Program Is Written:16-12-2025
+    Description Of The Program (In My Own Words):This program takes the size of an array from the user, reads the array elements, and prints all the elements using a for loop.
+    Expected Input And Expected Outputs:
+        Case 1:
+              Expected Input: size=5 
+              1
+              2
+              3
+              4
+              5
+
+              Expected Output:1 2 3 4 5 
+        Case 2:
+              Expected Input: size=2
+              1
+              2
+              
+
+              Expected Output:1 2 
+        Case 3:
+              Expected Input:3
+              6
+              7
+              8
+              
+
+              Expected Output:6 7 8
+    Conclusion:The program successfully demonstrates how to input and display array elements using loops in C.
+*/
+
+#include<stdio.h>
+int main()
+{
+int size;
+printf("enter the size of the array : ");
+scanf("%d",&size);
+
+
+int array[size];
+int index;
+
+
+for (index=0;index<size;index++)
+scanf("%d",&array[index]);
+
+
+for(index=0;index<size;index++)
+printf("%d",array[index]);
+}
+  
