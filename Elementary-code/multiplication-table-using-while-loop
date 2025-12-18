@@ -1,0 +1,90 @@
+/*
+    Name Of The Program:
+    Multiplication Table of a Given Number
+
+    Author Of The Program:
+    Lokesh
+
+    Purpose Of The Program:
+    To print the multiplication table of a given integer up to
+    a user-defined number of rows.
+
+    Date On Which The Program Is Written:
+    17-12-2025
+
+    Description Of The Program (In My Own Words):
+    This program takes an integer and the number of rows as input
+    from the user and prints the multiplication table of the given
+    number using a while loop. Input validation is performed to
+    ensure correct values are entered.
+
+    Expected Input And Expected Outputs:
+
+        Case 1:
+              Expected Input:
+              Number = 10
+              Rows   = 12
+
+              Expected Output:
+              10 * 1  = 10
+              10 * 2  = 20
+              10 * 3  = 30
+              10 * 4  = 40
+              10 * 5  = 50
+              10 * 6  = 60
+              10 * 7  = 70
+              10 * 8  = 80
+              10 * 9  = 90
+              10 * 10 = 100
+              10 * 11 = 110
+              10 * 12 = 120
+
+        Case 2:
+              Expected Input:
+              Number = 2
+              Rows   = 3
+
+              Expected Output:
+              2 * 1 = 2
+              2 * 2 = 4
+              2 * 3 = 6
+
+        Case 3:
+              Expected Input:
+              Number = 1
+              Rows   = 2
+
+              Expected Output:
+              1 * 1 = 1
+              1 * 2 = 2
+
+    Conclusion:
+    The program prints the multiplication table of a given number
+    up to the specified rows using a while loop and validates user input.
+*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    int number, rows, i = 1;
+
+    printf("Enter the number: ");
+    if (scanf("%d", &number) != 1) {
+        printf("INVALID INPUT!\n");
+        return 1;
+    }
+
+    printf("Enter the number of rows: ");
+    if (scanf("%d", &rows) != 1 || rows <= 0) {
+        printf("Rows must be a positive integer!\n");
+        return 1;
+    }
+
+    while (i <= rows) {
+        printf("%d * %d = %d\n", number, i, number * i);
+        i++;
+    }
+
+    return 0;
+}
