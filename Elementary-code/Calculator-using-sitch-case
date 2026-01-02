@@ -1,0 +1,101 @@
+/*
+    Name Of The Program: Calculator Using Switch Case
+    Author Of The Program: mahidhar
+    Purpose Of The Program: To perform a selected arithmetic operation (+, −, *, ÷, %) on multiple integers using a switch case in C and display the final result.
+    Date On Which The Program Is Written: 02-01-2026
+    Description Of The Program (In My Own Words): This program accepts an initial number, an arithmetic operator, and a set of additional integers. Using a loop and switch case, it performs the chosen operation sequentially on all the numbers and displays the final result.
+    Expected Input And Expected Outputs:
+        Case 1:
+              Expected Input:
+              Enter 1st number: 10
+              Enter an operator (+, -, *, /, ): +
+              Enter how many Extra integers you want : 3
+              Enter number #2: 20
+              Enter number #3: 30
+              Enter number #4: 40
+
+              Expected Output:
+              Final Result: 100
+              
+        Case 2:
+              Expected Input:
+             Enter 1st number: 5
+              Enter an operator (+, -, *, /, ): *
+              Enter how many Extra integers you want : 5
+              Enter number #2: 5
+              Enter number #3: 5
+              Enter number #4: 5
+              Enter number #5: 5
+              Enter number #6: 5
+
+              Expected Output:
+             Final Result: 15625
+    Conclusion:Thus, the program successfully performs arithmetic operations on multiple numbers using switch case and loops, demonstrating the use of conditional statements and iterative control in C programming.
+    
+*/
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int num, n, result;
+    char op;
+
+    printf("Enter 1st number: ");
+    scanf("%d", &num);
+    result = num;
+
+    printf("Enter an operator (+, -, *, /, %): ");
+    scanf(" %c", &op);
+
+    printf("Enter how many Extra integers you want : ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) 
+    {
+        printf("Enter number #%d: ",i+1);
+        scanf("%d", &num);
+
+        switch (op) 
+        {
+            case '+':
+                result += num;
+                break;
+            case '-':
+                result -= num;
+                break;
+            case '*':
+                result *= num;
+                break;
+            case '/':
+                if (num != 0) 
+                {
+                    result /= num;
+                } 
+                else 
+                {
+                    printf("Error: Division by zero!\n");
+                    return 0; 
+                }
+                break;
+            case '%':
+                if (num != 0) 
+                {
+                    result %= num;
+                } 
+                else 
+                {
+                    printf("Error: Modulo by zero!\n");
+                    return 0;
+                }
+                break;
+            default:
+                printf("Invalid operator!\n");
+                return 0;
+        }
+    }
+    printf("Final Result: %d\n", result);
+    return 0;
+}
